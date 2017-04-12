@@ -9,7 +9,7 @@ include 'includes/includes.inc.php';
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-            <h3>CodeFest</h3>
+            <h3>@Home</h3>
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
