@@ -4,7 +4,7 @@ require_once('class.user.php');
 $user_logout = new USER();
 
 if($user_logout->is_loggedin()!="") {
-    $user_logout->redirect('home.php');
+    $user_logout->redirect('uIndex.php');
 }
 
 if(isset($_GET['logout']) && $_GET['logout']=="true") {

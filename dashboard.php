@@ -4,13 +4,9 @@ include 'includes/includes.inc.php';
 require_once("session.php");
 require_once("class.user.php");
 $auth_user = new USER();
-
-
 $user_id = $_SESSION['user_session'];
-
 $stmt = $auth_user->runQuery("SELECT * FROM users WHERE user_id=:user_id");
 $stmt->execute(array(":user_id"=>$user_id));
-
 $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <head>
@@ -60,10 +56,6 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
             <div class="mdl-layout-spacer"></div>
         </nav>
     </div>
-
-
-<!-- VANAF HIER    -->
-
 
     <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
@@ -145,13 +137,6 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
             </div>
         </div>
     </main>
-
-
-
-<!--    TOT HIER    -->
-
-
-
 </div>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="position: fixed; left: -1000px; height: -1000px;">
     <defs>
