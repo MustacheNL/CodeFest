@@ -18,25 +18,25 @@ if(isset($_POST['btn-signup'])) {
     $ucity = strip_tags($_POST['txt_city']);
     $ucountry = strip_tags($_POST['txt_country']);
 
-    if($uname=="") {
+    if($uname == "") {
         $error[] = "Provide a username!";
-    } else if($umail=="") {
+    } else if($umail == "") {
         $error[] = "Provide a e-mail!";
     } else if(!filter_var($umail, FILTER_VALIDATE_EMAIL))	{
         $error[] = 'Provide a valid e-mail!';
-    } else if($upass=="") {
+    } else if($upass == "") {
         $error[] = "Provide a password!";
     } else if(strlen($upass) < 6) {
         $error[] = "Password must be atleast 6 characters!";
     } else if($_POST['txt_upass']!=$_POST['txt_upass2']) {
         $error[] = "The entered passwords are not the same!";
-    } else if($ustreet=="") {
+    } else if($ustreet == "") {
         $error[] = "Provide a street name!";
-    } else if($uzipcode=="") {
+    } else if($uzipcode == "") {
         $error[] = "Provide a ZIP code!";
-    } else if($ucity=="") {
+    } else if($ucity == "") {
         $error[] = "Provide a city name!";
-    } else if($ucountry=="") {
+    } else if($ucountry == "") {
         $error[] = "Provide a country name!";
     } else {
         try {
