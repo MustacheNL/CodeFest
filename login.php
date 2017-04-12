@@ -1,14 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: mike
- * Date: 4/12/2017
- * Time: 01:52 PM
- */
-include 'head.php';
-
-?>
-
+<?php include 'includes/includes.inc.php'; ?>
 <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
     <div class="mdl-layout--large-screen-only mdl-layout__header-row">
     </div>
@@ -32,7 +22,6 @@ include 'head.php';
 
 <body>
     <div class="form">
-
         <ul class="tab-group">
             <li class="tab active"><a href="#signup">Sign Up</a></li>
             <li class="tab"><a href="#login">Log In</a></li>
@@ -43,7 +32,6 @@ include 'head.php';
                 <h1>Sign Up for Free</h1>
 
                 <form action="/" method="post">
-
                     <div class="top-row">
                         <div class="field-wrap">
                             <label>
