@@ -1,13 +1,29 @@
 <?php
-$pagename = "Home";
+$pagename = "home";
 include 'includes/includes.inc.php';
+session_start();
+require_once("class.user.php");
+$login = new USER();
 
-if (isset($_POST['login'])) {
-    echo 'login';
-} else if (isset($_POST['register'])) {
-    echo 'register';
-} else {
-    //no button pressed
+if($login->is_loggedin()!="")
+{
+    $login->redirect('home.php');
+}
+
+if(isset($_POST['btn-login']))
+{
+    $uname = strip_tags($_POST['txt_uname_email']);
+    $umail = strip_tags($_POST['txt_uname_email']);
+    $upass = strip_tags($_POST['txt_password']);
+
+    if($login->doLogin($uname,$umail,$upass))
+    {
+        $login->redirect('home.php');
+    }
+    else
+    {
+        $error = "Wrong Details !";
+    }
 }
 ?>
 <html lang="en">
@@ -33,26 +49,52 @@ if (isset($_POST['login'])) {
 
         <div class="demo-card-wide mdl-card mdl-shadow--2dp">
             <div class="container">
-                <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text">login</h2>
+                <div class="signin-form">
+
+                    <div class="container">
+                        <form class="form-signin" method="post" id="login-form">
+
+                            <h2 class="form-signin-heading">Log In to WebApp.</h2><hr />
+
+                            <div id="error">
+                                <?php
+                                if(isset($error))
+                                {
+                                    ?>
+                                    <div class="alert alert-danger">
+                                        <i class="glyphicon glyphicon-warning-sign"></i> &nbsp; <?php echo $error; ?> !
+                                    </div>
+                                    <?php
+                                }
+                                ?>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="txt_uname_email" placeholder="Username or E mail ID" required />
+                                <span id="check-e"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="txt_password" placeholder="Your Password" />
+                            </div>
+
+                            <hr />
+
+                            <div class="form-group">
+                                <button type="submit" name="btn-login" class="btn btn-default">
+                                    <i class="glyphicon glyphicon-log-in"></i> &nbsp; SIGN IN
+                                </button>
+                            </div>
+                            <br />
+                            <label>Don't have account yet ! <a href="sign-up.php">Sign Up</a></label>
+                        </form>
+
+
+
+                    </div>
+
                 </div>
-                <form method="post" action="#">
-                    <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="text" id="username" />
-                        <label class="mdl-textfield__label" for="username">Username</label>
-                    </div>
-                    <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="password" id="userpass" />
-                        <label class="mdl-textfield__label" for="userpass">Password</label>
-                    </div>
-                    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="float:right">
-                        <input type="submit" name="login" value="login">
-                    </button>
-                    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="float:left">
-                        <input type="submit" name="register" value="register">
-                    </button>
-                </form>
-            </div> 
+            </div>
         </div>
         <?php include 'includes/footer.inc.php' ?>
     </main>
