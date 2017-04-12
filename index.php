@@ -18,7 +18,7 @@ if(isset($_POST['btn-login']))
 
     if($login->doLogin($uname,$umail,$upass))
     {
-        $login->redirect('home.php');
+        $login->redirect('uIndex.php');
     }
     else
     {
@@ -68,7 +68,7 @@ if(isset($_POST['btn-login']))
                                     <label class="mdl-textfield__label" for="sample1">Username or E-mail ID</label>
                                 </div>
                                 <div class="mdl-textfield mdl-js-textfield">
-                                <input class="mdl-textfield__input" type="text" id="sample1" name="txt_password">
+                                <input class="mdl-textfield__input" type="password" id="sample1" name="txt_password">
                                 <label class="mdl-textfield__label" for="sample1">Your Password</label>
                                 </div>
 
