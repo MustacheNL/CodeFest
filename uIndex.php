@@ -42,7 +42,7 @@ if (isset($_POST['login'])) {
             <a href="#features" class="mdl-layout__tab">Mijn kamer</a>
             <a href="#features" class="mdl-layout__tab">Mijn Account</a>
             <div class="mdl-layout-spacer"></div>
-            <a href="#features" class="mdl-layout__tab" style="color: red;">Uitloggen</a>
+            <a href="logout.php?logout=true" class="mdl-layout__tab" style="color: red;">Uitloggen</a>
 
 
 
