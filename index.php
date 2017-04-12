@@ -1,23 +1,8 @@
-<!--
-  Material Design Lite
-  Copyright 2015 Google Inc. All rights reserved.
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License
--->
-<html lang="en">
 <?php
+$pagename = "Home";
 include 'includes/includes.inc.php';
 ?>
+<html lang="en">
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
@@ -66,7 +51,7 @@ include 'includes/includes.inc.php';
             </div>
 
         </div>
-        <?php include 'footer.php'?>
+        <?php include 'includes/footer.inc.php' ?>
     </main>
 
 <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>

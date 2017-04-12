@@ -1,11 +1,12 @@
 <?php
+session_start();
 if(stristr($_SERVER['REQUEST_URI'], 'config.inc.php')){
     die("Wait a minute... who are you? You're not allowed to come here.");
 }
 
 /* Database Credentials */
-$DatabaseHost = "145.129.251.239"; //Database host (use localhost or 127.0.0.1)
-$DatabaseUser = "codefest"; //Database username login (standard root)
+$DatabaseHost = "145.129.251.239"; //Database host (ex. localhost or 127.0.0.1)
+$DatabaseUser = "codefest"; //Database username login (ex. root)
 $DatabasePassword = "codefest2017"; //Database password
 $DatabaseName = "Codefest"; //The database name (use "test" for test proposal, because test is always in a standard MySQL Database)
 
