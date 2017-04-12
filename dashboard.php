@@ -47,7 +47,7 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
                     <span class="visuallyhidden">Accounts</span>
                 </button>
                 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-                    <li class="mdl-menu__item">Add account...</li>
+                    <li class="mdl-menu__item" id="Register">Add account...</li>
                     <li class="mdl-menu__item">Delete account...</li>
                     <a href="logout.php?logout=true" style="text-decoration: none;"><li class="mdl-menu__item">Log out...</li></a>
                 </ul>
@@ -60,6 +60,11 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
             <div class="mdl-layout-spacer"></div>
         </nav>
     </div>
+
+
+<!-- VANAF HIER    -->
+
+
     <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
             <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
@@ -140,6 +145,13 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
             </div>
         </div>
     </main>
+
+
+
+<!--    TOT HIER    -->
+
+
+
 </div>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="position: fixed; left: -1000px; height: -1000px;">
     <defs>
