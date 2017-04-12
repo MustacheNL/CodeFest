@@ -1,1 +1,1 @@
-//Menu comes here once Mike is done!
+<?php //Menu comes here once Mike is done! ?>
