@@ -75,30 +75,26 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
             </div>
         </header>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-            <a class="mdl-navigation__link" href="">Betalingen huur</a>
-            <a class="mdl-navigation__link" href="">Exporteren</a>
-            <a class="mdl-navigation__link" href="">Statistieken</a>
+            <a class="mdl-navigation__link" id="content1" href="#">Betalingen huur</a>
+            <a class="mdl-navigation__link" id="content2" href="#">Exporteren</a>
+            <a class="mdl-navigation__link" id="content3" href="#">Statistieken</a>
             <div class="mdl-layout-spacer"></div>
         </nav>
     </div>
     <main class="mdl-layout__content mdl-color--grey-100">
         <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-            <div class="content1">
+            <div class="content1" style="width: 100%">
                 <p>content1</p>
             </div>
 
-            <div class="content2">
+            <div class="content2" style="width: 100%">
                 <p>content2</p>
             </div>
 
-            <div class="content3">
+            <div class="content3" style="width: 100%">
                 <p>content3</p>
             </div>
-            <div>
-            <button id="content1">content1</button>
-            <button id="content2">content2</button>
-            <button id="content3">content3</button>
-            </div>
+
         </div>
     </main>
 
