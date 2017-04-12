@@ -1,4 +1,5 @@
 <?php
+$pagename = "Home";
 include 'includes/includes.inc.php';
 session_start();
 require_once("class.user.php");

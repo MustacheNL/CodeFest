@@ -14,7 +14,7 @@ $stmt->execute(array(":user_id"=>$user_id));
 
 $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 
-$pagename = "Home";
+$pagename = "User home";
 include "includes/header.inc.php";
 
 if (isset($_POST['login'])) {
