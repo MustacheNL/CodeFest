@@ -47,8 +47,9 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
                     <span class="visuallyhidden">Accounts</span>
                 </button>
                 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-                    <li class="mdl-menu__item">Add another account...</li>
-                    <a href="logout.php?logout=true" style="text-decoration: none;"><li class="mdl-menu__item">Log out</li></a>
+                    <li class="mdl-menu__item">Add account...</li>
+                    <li class="mdl-menu__item">Delete account...</li>
+                    <a href="logout.php?logout=true" style="text-decoration: none;"><li class="mdl-menu__item">Log out...</li></a>
                 </ul>
             </div>
         </header>
