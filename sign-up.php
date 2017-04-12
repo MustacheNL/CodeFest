@@ -81,36 +81,47 @@ if(isset($_POST['btn-signup']))
 
                     <div class="container">
 
-
+                        <form action="sign-up.php" method="post" class="form-signin">
                         <h2 class="form-signin-heading">Sign Up</h2><hr />
 
-                        <div id="error">
+
                             <?php
                             if(isset($error))
                             {
+                                foreach($error as $error)
+                                {
+                                    ?>
+                                    <div class="alert alert-danger">
+                                        <i class="glyphicon glyphicon-warning-sign"></i> &nbsp; <?php echo $error; ?>
+                                    </div>
+                                    <?php
+                                }
+                            }
+                            else if(isset($_GET['joined']))
+                            {
                                 ?>
-                                <div class="alert alert-danger">
-                                    <i class="glyphicon glyphicon-warning-sign"></i> &nbsp;
+                                <div class="alert alert-info">
+                                    <i class="glyphicon glyphicon-log-in"></i> &nbsp; Successfully registered <a href='index.php'>login</a> here
                                 </div>
                                 <?php
                             }
                             ?>
-                        </div>
 
-                        <form action="#" method="post" class="form-signin">
+
+
                             <div class="mdl-textfield mdl-js-textfield">
-                                <input class="mdl-textfield__input" type="text" id="sample1" name="txt_uname" value="<?php if(isset($error)){echo $uname;}?>" required>
+                                <input class="mdl-textfield__input" type="text" id="sample1" name="txt_uname" value="<?php if(isset($error)){echo $uname;}?>" >
                                 <label class="mdl-textfield__label" for="sample1">Enter Username</label>
                             </div>
                             <div class="mdl-textfield mdl-js-textfield">
-                                <input class="mdl-textfield__input" type="text" id="sample1" name="txt_umail" value="<?php if(isset($error)){echo $umail;}?>" required>
+                                <input class="mdl-textfield__input" type="text" id="sample1" name="txt_umail" value="<?php if(isset($error)){echo $umail;}?>" >
                                 <label class="mdl-textfield__label" for="sample1">Enter E-Mail</label>
                             </div>
                             <div class="mdl-textfield mdl-js-textfield">
-                                <input class="mdl-textfield__input" type="password" id="sample1" name="txt_upass" required>
+                                <input class="mdl-textfield__input" type="password" id="sample1" name="txt_upass" >
                                 <label class="mdl-textfield__label" for="sample1">Enter Password</label>
                             </div>
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored, btn btn-default" type="submit" name="btn-signup">
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored,  btn-primary" type="submit" name="btn-signup">
                                 <i class="glyphicon glyphicon-open-file"></i> Sign Up
                             </button>
                         </form>
