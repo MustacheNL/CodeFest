@@ -56,15 +56,7 @@ if (isset($_POST['login'])) {
         </div>
         <?php include 'includes/footer.inc.php' ?>
     </main>
-    <?php
-    if (isset($_POST['login'])) {
-        echo 'login';
-    } else if (isset($_POST['register'])) {
-        echo 'register';
-    } else {
-        //no button pressed
-    }
-    ?>
+   
 <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </body>
 </html>
