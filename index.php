@@ -15,8 +15,8 @@
   limitations under the License
 -->
 <html lang="en">
-<?php include 'head.php' ?>
-<h1>test</h1>
-<?php include 'body.php'?>
+<?php
+include 'includes/system.inc.php';
+?>
 
 </html>
