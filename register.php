@@ -96,10 +96,7 @@ if(isset($_POST['btn-signup'])) {
                                 <span class="mdl-chip__contact mdl-color--green mdl-color-text--white">:D</span>
                                 <span class="mdl-chip__text">Succesfully registered, you will be redirected to the home in 5 seconds. If not click <a href='index.php'>here</a>!</span>
                             </span>
-
-                                <?php
-                            }
-                            ?>
+                            <?php } ?>
                             <div class="mdl-textfield mdl-js-textfield">
                                 <input class="mdl-textfield__input" type="text" id="sample1" name="txt_uname" value="<?php if(isset($error)){echo $uname;}?>" >
                                 <label class="mdl-textfield__label" for="sample1">Username...</label>
