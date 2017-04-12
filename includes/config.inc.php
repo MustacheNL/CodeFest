@@ -3,7 +3,7 @@
 if(stristr($_SERVER['REQUEST_URI'], 'config.inc.php')){
     die("Wait a minute... who are you? You're not allowed to come here.");
 }
-//
+
 ///* Database Credentials */
 //$DatabaseHost = "145.129.251.239"; //Database host (ex. localhost or 127.0.0.1)
 //$DatabaseUser = "codefest"; //Database username login (ex. root)
@@ -22,10 +22,10 @@ if(stristr($_SERVER['REQUEST_URI'], 'config.inc.php')){
 
 class Database
 {
-    private $host = "localhost";
-    private $db_name = "codefest";
-    private $username = "root";
-    private $password = "";
+    private $host = "145.129.251.239";
+    private $db_name = "Codefest";
+    private $username = "codefest";
+    private $password = "codefest2017";
     public $conn;
 
     public function dbConnection()

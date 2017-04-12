@@ -37,13 +37,6 @@ if(isset($_POST['btn-login']))
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-            <a href="#overview" class="mdl-layout__tab is-active">Home</a>
-            <a href="dashboard/dashboard.php" class="mdl-layout__tab">Huizen</a>
-            <a href="#features" class="mdl-layout__tab">Details</a>
-            <a href="#features" class="mdl-layout__tab">Technology</a>
-            <a href="#features" class="mdl-layout__tab">FAQ</a>
-        </div>
     </header>
     <main class="mdl-layout__content">
 
@@ -52,9 +45,9 @@ if(isset($_POST['btn-login']))
                 <div class="signin-form">
 
                     <div class="container">
-                        <form class="form-signin" method="post" id="login-form">
 
-                            <h2 class="form-signin-heading">Log In to WebApp.</h2><hr />
+
+                            <h2 class="form-signin-heading">Log In</h2><hr />
 
                             <div id="error">
                                 <?php
@@ -69,25 +62,41 @@ if(isset($_POST['btn-login']))
                                 ?>
                             </div>
 
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="txt_uname_email" placeholder="Username or E mail ID" required />
-                                <span id="check-e"></span>
-                            </div>
+                            <form action="#">
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" id="sample1" name="txt_uname_email">
+                                    <label class="mdl-textfield__label" for="sample1">Username or E-mail ID</label>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield">
+                                <input class="mdl-textfield__input" type="text" id="sample1" name="txt_password">
+                                <label class="mdl-textfield__label" for="sample1">Your Password</label>
+                                </div>
+                            </form>
 
-                            <div class="form-group">
-                                <input type="password" class="form-control" name="txt_password" placeholder="Your Password" />
-                            </div>
+<!--                            <div class="form-group">-->
+<!--                                <input type="text" class="form-control" name="txt_uname_email" placeholder="Username or E mail ID" required />-->
+<!--                                <span id="check-e"></span>-->
+<!--                            </div>-->
+<!---->
+<!--                            <div class="form-group">-->
+<!--                                <input type="password" class="form-control" name="txt_password" placeholder="Your Password" />-->
+<!--                            </div>-->
+<!---->
+<!--                            <hr />-->
 
-                            <hr />
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                            <i class="glyphicon glyphicon-log-in"></i> Sign Up
+                        </button>
 
-                            <div class="form-group">
-                                <button type="submit" name="btn-login" class="btn btn-default">
-                                    <i class="glyphicon glyphicon-log-in"></i> &nbsp; SIGN IN
-                                </button>
-                            </div>
+<!--                            <div class="form-group">-->
+<!--                                <button type="submit" name="btn-login" class="btn btn-default">-->
+<!--                                    <i class="glyphicon glyphicon-log-in"></i> &nbsp; SIGN IN-->
+<!--                                </button>-->
+<!--                            </div>-->
+                            <br>
                             <br />
-                            <label>Don't have account yet ! <a href="sign-up.php">Sign Up</a></label>
-                        </form>
+                            <label>Don't have account yet! <a href="sign-up.php">Sign Up</a></label>
+
 
 
 
