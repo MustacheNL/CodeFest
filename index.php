@@ -15,7 +15,7 @@ include 'includes/includes.inc.php';
         </div>
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
             <a href="#overview" class="mdl-layout__tab is-active">Home</a>
-            <a href="#features" class="mdl-layout__tab">Huizen</a>
+            <a href="dashboard/dashboard.php" class="mdl-layout__tab">Huizen</a>
             <a href="#features" class="mdl-layout__tab">Details</a>
             <a href="#features" class="mdl-layout__tab">Technology</a>
             <a href="#features" class="mdl-layout__tab">FAQ</a>
