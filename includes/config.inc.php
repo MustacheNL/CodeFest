@@ -5,7 +5,7 @@ if(stristr($_SERVER['REQUEST_URI'], 'config.inc.php')){
 
 /* Database Credentials */
 $DatabaseHost = "localhost"; //Database host (use localhost or 127.0.0.1)
-$DatabaseUser = "root"; //Database username login (standard root)
+$DatabaseUser = "Codefest"; //Database username login (standard root)
 $DatabasePassword = "codefest2017"; //Database password
 $DatabaseName = "Codefest"; //The database name (use "test" for test proposal, because test is always in a standard MySQL Database)
 
