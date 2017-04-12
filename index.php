@@ -16,7 +16,7 @@
 -->
 <html lang="en">
 <?php
-include 'includes/system.inc.php';
+include 'includes/includes.inc.php';
 ?>
 
 </html>

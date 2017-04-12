@@ -1,2 +1,2 @@
 <?php
-include '../head.php';
+include 'menu.inc.php';
