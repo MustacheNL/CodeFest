@@ -1,4 +1,7 @@
-<?php include 'includes/includes.inc.php';  ?>
+<?php
+$pagename = "Home";
+include 'includes/includes.inc.php';
+?>
 <html lang="en">
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
