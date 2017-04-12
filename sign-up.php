@@ -90,7 +90,7 @@ if(isset($_POST['btn-signup']))
                             {
                                 ?>
                                 <div class="alert alert-danger">
-                                    <i class="glyphicon glyphicon-warning-sign"></i> &nbsp;  !
+                                    <i class="glyphicon glyphicon-warning-sign"></i> &nbsp;
                                 </div>
                                 <?php
                             }
