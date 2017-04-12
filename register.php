@@ -94,7 +94,7 @@ if(isset($_POST['btn-signup'])) {
                                 ?>
                             <span class="mdl-chip mdl-chip--contact">
                                 <span class="mdl-chip__contact mdl-color--green mdl-color-text--white">:D</span>
-                                <span class="mdl-chip__text">Succesfully registered, you will be redirected to the home in 5 seconds. If not click <a href='index.php'>here</a>.</span>
+                                <span class="mdl-chip__text">Succesfully registered, you will be redirected to the home in 5 seconds. If not click <a href='index.php'>here</a>!</span>
                             </span>
 
                                 <?php
