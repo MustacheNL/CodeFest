@@ -255,4 +255,8 @@ margin: auto;
 .container{
   padding: 20px;
 }
-/*einde login box styling */
+
+.mdl-textfield {
+  display: block;
+  margin: auto;
+}
