@@ -62,7 +62,7 @@ if(isset($_POST['btn-login']))
                                 ?>
                             </div>
 
-                            <form action="#">
+                            <form action="index.php" method="post">
                                 <div class="mdl-textfield mdl-js-textfield">
                                     <input class="mdl-textfield__input" type="text" id="sample1" name="txt_uname_email">
                                     <label class="mdl-textfield__label" for="sample1">Username or E-mail ID</label>
@@ -71,6 +71,10 @@ if(isset($_POST['btn-login']))
                                 <input class="mdl-textfield__input" type="text" id="sample1" name="txt_password">
                                 <label class="mdl-textfield__label" for="sample1">Your Password</label>
                                 </div>
+
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored, btn btn-default" type="submit" name="btn-login">
+                                    <i class="glyphicon glyphicon-log-in"></i> Sign In
+                                </button>
                             </form>
 
 <!--                            <div class="form-group">-->
@@ -84,9 +88,6 @@ if(isset($_POST['btn-login']))
 <!---->
 <!--                            <hr />-->
 
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                            <i class="glyphicon glyphicon-log-in"></i> Sign Up
-                        </button>
 
 <!--                            <div class="form-group">-->
 <!--                                <button type="submit" name="btn-login" class="btn btn-default">-->
