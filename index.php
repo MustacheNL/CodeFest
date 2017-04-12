@@ -1,6 +1,14 @@
 <?php
 $pagename = "Home";
 include 'includes/includes.inc.php';
+
+if (isset($_POST['login'])) {
+    echo 'login';
+} else if (isset($_POST['register'])) {
+    echo 'register';
+} else {
+    //no button pressed
+}
 ?>
 <html lang="en">
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
@@ -22,38 +30,41 @@ include 'includes/includes.inc.php';
         </div>
     </header>
     <main class="mdl-layout__content">
-        <style>
-            .demo-card-wide.mdl-card {
-                width: 512px;
-                margin: auto;
-                margin-top: 50px;
-                margin-bottom: 50px;
-            }
-            .demo-card-wide > .mdl-card__title {
-                color: black;
 
-
-            }
-
-        </style>
         <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-            <div class="mdl-card__title">
-                <h2 class="mdl-card__title-text">Welcome</h2>
+            <div class="container">
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">login</h2>
+                </div>
+                <form method="post" action="#">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="text" id="username" />
+                        <label class="mdl-textfield__label" for="username">Username</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="password" id="userpass" />
+                        <label class="mdl-textfield__label" for="userpass">Password</label>
+                    </div>
+                    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="float:right">
+                        <input type="submit" name="login" value="login">
+                    </button>
+                    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="float:left">
+                        <input type="submit" name="register" value="register">
+                    </button>
+                </form>
             </div>
-            <div class="mdl-card__supporting-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Mauris sagittis pellentesque lacus eleifend lacinia...
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                    Get Started
-                </a>
-            </div>
-
         </div>
         <?php include 'includes/footer.inc.php' ?>
     </main>
-
+    <?php
+    if (isset($_POST['login'])) {
+        echo 'login';
+    } else if (isset($_POST['register'])) {
+        echo 'register';
+    } else {
+        //no button pressed
+    }
+    ?>
 <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </body>
 </html>
