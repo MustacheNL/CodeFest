@@ -52,7 +52,7 @@ if (isset($_POST['login'])) {
                         <input type="submit" name="register" value="register">
                     </button>
                 </form>
-            </div>
+            </div> 
         </div>
         <?php include 'includes/footer.inc.php' ?>
     </main>
