@@ -1,9 +1,21 @@
 <html lang="en">
 <?php $pagename = "Dashboard";
-include '../includes/includes.inc.php' ?>
+include 'includes/includes.inc.php';
+require_once("session.php");
+require_once("class.user.php");
+$auth_user = new USER();
+
+
+$user_id = $_SESSION['user_session'];
+
+$stmt = $auth_user->runQuery("SELECT * FROM users WHERE user_id=:user_id");
+$stmt->execute(array(":user_id"=>$user_id));
+
+$userRow=$stmt->fetch(PDO::FETCH_ASSOC);
+?>
 <head>
-    <link rel="stylesheet" href="../css/styles-dashboard.css">
-    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="css/styles-dashboard.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
     <style>
         #view-source {
             position: fixed;
@@ -26,18 +38,17 @@ include '../includes/includes.inc.php' ?>
     </header>
     <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <header class="demo-drawer-header">
-            <img src="../images/user.jpg" class="demo-avatar">
+            <img src="images/user.jpg" class="demo-avatar">
             <div class="demo-avatar-dropdown">
-                <span>DB EMAIL ADRESS</span>
+                <span><?php echo $userRow['user_email']; ?></span>
                 <div class="mdl-layout-spacer"></div>
                 <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                     <i class="material-icons" role="presentation">arrow_drop_down</i>
                     <span class="visuallyhidden">Accounts</span>
                 </button>
                 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-                    <li class="mdl-menu__item">STAFF MEMBER 2</li>
-                    <li class="mdl-menu__item">STAFF MEMBER 3</li>
-                    <li class="mdl-menu__item"><i class="material-icons">add</i>Add another account...</li>
+                    <li class="mdl-menu__item">Add another account...</li>
+                    <a href="logout.php?logout=true" style="text-decoration: none;"><li class="mdl-menu__item">Log out</li></a>
                 </ul>
             </div>
         </header>

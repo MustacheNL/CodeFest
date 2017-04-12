@@ -38,11 +38,11 @@ if (isset($_POST['login'])) {
         </div>
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
             <a href="#overview" class="mdl-layout__tab is-active">Home</a>
-            <a href="dashboard/dashboard.php" class="mdl-layout__tab">Huizen</a>
+            <a href="dashboard.php" class="mdl-layout__tab">Huizen</a>
             <a href="#features" class="mdl-layout__tab">Mijn kamer</a>
             <a href="#features" class="mdl-layout__tab">Mijn Account</a>
             <div class="mdl-layout-spacer"></div>
-            <a href="logout.php?logout=true" class="mdl-layout__tab" style="color: red;">Uitloggen</a>
+            <a href="logout.php?logout=true" class="mdl-layout__tab" style="color: red;">Log out</a>
 
 
 
