@@ -256,7 +256,12 @@ margin: auto;
   padding: 20px;
 }
 
-.mdl-textfield {
+.mdl-textfield  {
+  display: block;
+  margin: auto;
+}
+
+#signup {
   display: block;
   margin: auto;
 }
