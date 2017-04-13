@@ -8,6 +8,8 @@ $user_id = $_SESSION['user_session'];
 $stmt = $auth_user->runQuery("SELECT * FROM users WHERE user_id=:user_id");
 $stmt->execute(array(":user_id"=>$user_id));
 $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
+
+
 ?>
 <head>
     <link rel="stylesheet" href="css/styles-dashboard.css">
@@ -84,7 +86,27 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
     <main class="mdl-layout__content mdl-color--grey-100">
         <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
             <div class="content1" style="width: 100%">
-                <p>content1</p>
+                <table class="mdl-data-table mdl-js-data-table">
+                    <tr>
+                        <th class="mdl-data-table__cell--non-numeric">name</th>
+                        <th class="mdl-data-table__cell--non-numeric">email</th>
+                    </tr>
+                <?php
+                $obj = new Database();
+                $stmt = $obj->dbConnection()->prepare("SELECT * FROM users");
+                $stmt->execute();
+                $results=$stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                foreach ($results as $row): ?>
+
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric"><?php echo $row['user_name']; ?></td>
+                        <td class="mdl-data-table__cell--non-numeric"><?php echo $row['user_email']; ?></td>
+
+                    </tr>
+                <?php endforeach; ?>
+                </table>
+
             </div>
 
             <div class="content2" style="width: 100%">
